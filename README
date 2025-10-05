@@ -1,3 +1,32 @@
+This is a git archive of the Apache Gump project source code. Find
+out more about Apache Gump from Apache:
+
+  https://gump.apache.org/
+
+This 'main' branch forks off from the live branch.
+
+The gump project is using Subversion for version control.
+
+This archive was created on October 5th, 2025 using git-svn and svn2git.
+Specifically, the approach used was:
+
+ * svn2git https://svn.apache.org/repos/asf/gump/ --trunk live
+ * fix errors, workaround issues, run some svn2git commands manually
+ * git checkout -b main live
+ * curl -O https://gitbox.apache.org/authors.txt
+ * cat authors.txt | sed -E -e 's/^([^=]+) = (.*)$/\2 \1 <\1@13f79535-47bb-0310-9956-ffa450edef68>/g' > author_map.txt
+ * git filter-repo --mailmap ../author_map.txt --force
+
+Note this means that
+
+  https://svn.apache.org/repos/asf/gump/metadata/
+
+is not included in this archive. That directory has gump its
+project metadata config for the last few years.
+
+Below follows the rest of the README file:
+
+
 Welcome to               _____
                         |   __|_ Apache_ ___ 
                         |  |  | | |     | . |
